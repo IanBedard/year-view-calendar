@@ -1,6 +1,14 @@
+
+
 # year-view-calendar
 
 A lightweight, dependency-free year-view calendar component that you can drop into any HTML page. It renders a full year (12 months) in a compact grid, supports day-level events (colored badges), and exposes a simple JS API for interaction.
+
+
+![Logo](https://raw.githubusercontent.com/IanBedard/year-view-calendar/refs/heads/main/calendar-year-view.png)
+
+
+
 
 ## Installation
 
