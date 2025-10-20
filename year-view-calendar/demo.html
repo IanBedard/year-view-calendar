@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+        <style>
+  
+            *{box-sizing:border-box}
+            html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+            body{background:linear-gradient(180deg,#051025 0%, #071124 60%);color:#e6eef8;padding:28px}
+
+        </style>
+</head>
+
+            <div class="calendar"></div>
+   
+</body> 
+<script src="script.js"></script>
+<script>
+    // Initialize calendar object from HTML
+        document.addEventListener('DOMContentLoaded', function(){
+            const el = document.querySelector('.calendar')
+            if (!el) return
+            // sample events map
+            const events = {
+                '2025-02-12': { color: '#159715', text: 'lorem ipsum dolor fdsfdsfsdsfsdfsdfdssfdsfs' },
+                '2025-10-20': { color: '#ef4444', text: 'Today' }
+            }
+            // create instance and expose globally (show header with arrows and year input; display 2026 initially)
+            window.myCalendar = new Calendar(el, { style: 'dark', minDate: null, monthsPerRow: 3, startWeekOnMonday: false, events, showHeader: true, showArrows: true, showYearInput: true, displayYear: 2026 })
+        })
+</script>
+</html>

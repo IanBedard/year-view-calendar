@@ -1,0 +1,29 @@
+{
+  "name": "year-view-calendar",
+  "version": "1.0.2",
+  "description": "Calendar with a year view of all months ",
+  "main": "script.js",
+  "browser": "script.js",
+  "files": [
+    "year-view-calendar/script.js",
+    "year-view-calendar/demo.html",
+     "year-view-calendar/style.css",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IanBedard/year-view-calendar.git"
+  },
+  "keywords": [
+    "calendar"
+  ],
+  "author": "Ian Bedard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IanBedard/year-view-calendar/issues"
+  },
+  "homepage": "https://github.com/IanBedard/year-view-calendar#readme"
+}

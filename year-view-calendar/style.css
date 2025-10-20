@@ -1,0 +1,58 @@
+           :root{
+                --bg:#0f1724;
+                --card:#111827;
+                --muted:#9ca3af;
+                --accent:#6ee7b7;
+                --accent-2:#60a5fa;
+                --today:#fef3c7;
+                color-scheme: dark;
+            }
+ 
+ .calendar-wrapper{max-width:1200px;margin:0 auto}
+            .calendar-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+            .controls{display:flex;gap:8px;align-items:center}
+            .btn{background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:8px 12px;border-radius:8px;cursor:pointer}
+            .btn:focus{outline:2px solid rgba(96,165,250,0.18);}
+            .year-display{font-size:1.25rem;font-weight:600}
+            .calendar{display:block}
+            .year-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+            .month{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:12px;border-radius:12px}
+            .month-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+            .month-title h3{margin:0;font-size:0.95rem}
+            .weekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;color:var(--muted);font-size:0.75rem;margin-bottom:6px}
+            .days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+            .day{position:relative;height:34px;display:flex;align-items:center;justify-content:center;border-radius:8px;color:#cbd5e1;background:transparent;border:0;padding:0 6px;cursor:pointer}
+            .day[aria-disabled="true"]{opacity:0;pointer-events:none}
+            .day:hover{background:rgba(255,255,255,0.02)}
+            .day:focus{outline:2px solid rgba(110,231,183,0.15)}
+            .today{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#07203b;font-weight:700}
+            .muted{color:var(--muted)}
+            .event-badge{position:absolute;right:6px;bottom:6px;height:16px;min-width:16px;padding:0 6px;border-radius:10px;font-size:11px;display:inline-flex;align-items:center;justify-content:center;color:#fff;z-index:3;box-shadow:0 2px 6px rgba(2,6,23,0.5)}
+            .day .event-badge{transform:translateZ(0)}
+            .calendar-wrapper.light .event-badge{box-shadow:0 1px 4px rgba(2,6,23,0.08)}
+            /* tooltip */
+            .date-tooltip{position:fixed;background:#0b1220;color:#e6eef8;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 6px 24px rgba(2,6,23,0.6);z-index:9999;min-width:140px}
+                    @media (max-width:520px){.month{padding:10px}.day{height:30px}}
+
+                    /* light theme overrides when applied to the wrapper via class .light */
+                    .calendar-wrapper.light,
+                    /* or when .light is placed on body or any ancestor */
+                    .light {
+                        --bg:#f8fafc;
+                        --card:#ffffff;
+                        --muted:#6b7280;
+                        --accent:#06b6d4;
+                        --accent-2:#3b82f6;
+                        --today:#fde68a;
+                        color-scheme: light;
+                        color: #0f1724;
+                        background: linear-gradient(180deg,#ffffff 0%, #f1f5f9 60%);
+                    }
+                    .calendar-wrapper.light .btn,
+                    .light .btn {background:transparent;color:var(--muted);border-color:rgba(15,23,42,0.06)}
+                    .calendar-wrapper.light .month,
+                    .light .month {background:var(--card);border-color:rgba(2,6,23,0.04)}
+                    .calendar-wrapper.light .date-tooltip,
+                    .light .date-tooltip {background:#ffffff;color:#0f1724;border-color:rgba(2,6,23,0.04)}
+                    .calendar-wrapper.light .event-badge,
+                    .light .event-badge {box-shadow:0 1px 4px rgba(2,6,23,0.08)}
