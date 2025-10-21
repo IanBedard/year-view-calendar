@@ -58,8 +58,10 @@ class Calendar {
 
 	_applyStyle(){
 		if (!this.wrapper) return
+		// normalize: remove both theme classes then add the requested one
+		this.wrapper.classList.remove('light', 'dark')
 		if (this.opts.style === 'light') this.wrapper.classList.add('light')
-		else this.wrapper.classList.remove('light')
+		else if (this.opts.style === 'dark') this.wrapper.classList.add('dark')
 	}
 
 	_bindControls(){
@@ -474,7 +476,7 @@ class Calendar {
 	_ensureTooltip(){
 		if (!this.tooltipEl){
 			this.tooltipEl = document.createElement('div')
-			this.tooltipEl.className = 'date-tooltip'
+			this.tooltipEl.className = 'yvc-date-tooltip'
 			this.tooltipEl.style.display = 'none'
 			document.body.appendChild(this.tooltipEl)
 		}
