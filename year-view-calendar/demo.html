@@ -14,22 +14,36 @@
         </style>
 </head>
 
-            <div class="calendar"></div>
+            <div class="calendar" ></div>
+
    
 </body> 
 <script src="script.js"></script>
 <script>
-    // Initialize calendar object from HTML
-        document.addEventListener('DOMContentLoaded', function(){
-            const el = document.querySelector('.calendar')
-            if (!el) return
-            // sample events map
-            const events = {
-                '2025-02-12': { color: '#159715', text: 'lorem ipsum dolor fdsfdsfsdsfsdfsdfdssfdsfs' },
-                '2025-10-20': { color: '#ef4444', text: 'Today' }
-            }
-            // create instance and expose globally (show header with arrows and year input; display 2026 initially)
-            window.myCalendar = new Calendar(el, { style: 'dark', minDate: null, monthsPerRow: 3, startWeekOnMonday: false, events, showHeader: true, showArrows: true, showYearInput: true, displayYear: 2026 })
-        })
+    // Initialize calendar object from HTML and wire demo controls
+    document.addEventListener('DOMContentLoaded', function(){
+        const el = document.querySelector('.calendar')
+        if (!el) return
+
+        // sample events map
+        const events = {
+            '2025-02-12': [{ color: '#159715', text: 'BD' }],
+            '2025-10-20': [
+                { color: '#ef4444', text: 'Ev A' },
+                { color: '#ef8a4a', text: 'Ev B' },
+                { color: '#ef7654', text: 'Ev C' },
+                { color: '#ef9966', text: 'Ev D' }
+            ]
+        }
+
+        try {
+            window.myCalendar = new Calendar('.calendar', { style: 'light', events })
+        } catch (err) {
+            console.error('Calendar not available:', err)
+            return
+        }
+
+      
+    })
 </script>
 </html>

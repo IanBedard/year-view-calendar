@@ -90,35 +90,5 @@ Example:
 window.myCalendar.addEvent('2025-12-25', { color: '#0ea5a4', text: 'X' })
 ```
 
-## Accessibility & keyboard
-
-- Days are rendered as buttons and can be focused. Press Enter or Space to open the tooltip for a day.
-- Header controls are standard buttons and inputs.
-
-## Customization
-
-- The component uses CSS variables for colors (see `:root` in `index.html`). You can override variables in your page or add custom rules when using the `light` class.
-
-## Publishing as npm package
-
-The `package.json` has a `browser` field pointing to `script.js`. The `files` array includes `script.js`, `index.html`, and `README.md` so they're included when publishing.
-
-To publish:
-
-```bash
-npm publish
-```
-
-Make sure `name` in `package.json` is unique on npm.
-
-## Troubleshooting
-
-- If the header doesn't show, ensure `showHeader: true` and that your container has sufficient space.
-- If event badges aren't visible, verify date keys are exact `YYYY-MM-DD` strings and that `text` is short (badge truncates to 2 characters).
-
-If you'd like, I can:
-- Add persistent storage (localStorage) for events
-- Add editable popovers to create/edit events
-- Publish a prebuilt minified `script.min.js` for CDN use
 
 License: ISC
