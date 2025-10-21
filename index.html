@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="package/style.css">
+        <style>
+  
+      
+
+        </style>
+</head>
+<div class="calendar-wrapper">
+  <div class="calendar"></div>
+</div>
+
+   
+</body> 
+<script src="package/year-view-calendar.js"></script>
+<script>
+    // Initialize calendar object from HTML and wire demo controls
+    document.addEventListener('DOMContentLoaded', function(){
+        const el = document.querySelector('.calendar')
+        if (!el) return
+
+        // sample events map
+        const events = {
+            '2025-02-12': [{ color: '#159715', text: 'BD' }],
+            '2025-10-20': [
+                { color: '#ef4444', text: 'Ev A' },
+                { color: '#ef8a4a', text: 'Ev B' },
+                { color: '#ef7654', text: 'Ev C' },
+                { color: '#ef9966', text: 'Ev D' }
+            ],
+             '2025-01-20': [
+                { color: '#e3e3e3', text: 'Ev A' },
+                { color: '#ef8a4a', text: 'Ev B' },
+                { color: '#ef7654', text: 'Ev C' },
+                { color: '#ef9966', text: 'Ev D' }
+            ]
+        }
+
+        try {
+            window.myCalendar = new Calendar('.calendar', { style: 'light', events })
+        } catch (err) {
+            console.error('Calendar not available:', err)
+            return
+        }
+
+      
+    })
+</script>
+</html>
