@@ -1,13 +1,14 @@
 {
   "name": "year-view-calendar",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Calendar with a year view of all months ",
   "main": "script.js",
   "browser": "script.js",
   "files": [
-    "year-view-calendar/script.js",
-    "year-view-calendar/demo.html",
-     "year-view-calendar/style.css",
+    "package/year-view-calendar.js",
+    "package/year-view-calendar.min.js",
+    "package/demo.html",
+     "package/style.css",
     "README.md"
   ],
   "scripts": {

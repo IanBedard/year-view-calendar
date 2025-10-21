@@ -10,7 +10,7 @@ A lightweight, dependency-free year/month/day calendar component you can drop in
 
 The component is zero-dependency and exposes a small, friendly JS API.
 
-![Logo](https://github.com/IanBedard/year-view-calendar/blob/main/october.png?raw=true)
+![Logo](https://github.com/IanBedard/year-view-calendar/blob/main/img/light-month.png?raw=true)
 
 ## Installation
 
@@ -19,7 +19,7 @@ Include the script directly or install via npm.
 Via script tag
 
 ```html
-<script src="/path/to/script.js"></script>
+<script src="/path/to/year-view-calendar.js"></script>
 ```
 
 Via npm
@@ -31,7 +31,8 @@ npm install year-view-calendar
 ## Quick start
 
 Add the container and initialize the calendar. The header includes a view selector (Year / Month / Day) and a date picker (type="date") — picking a date jumps straight to Day view.
-![Logo](https://github.com/IanBedard/year-view-calendar/blob/main/Screenshot%202025-10-21%20101602.png?raw=true)
+![Logo](https://github.com/IanBedard/year-view-calendar/blob/main/img/dark-preview.png?raw=true)
+![Logo](https://github.com/IanBedard/year-view-calendar/blob/main/img/year-preview.png?raw=true)
 ```html
 <div class="calendar-wrapper">
   <div class="calendar"></div>
